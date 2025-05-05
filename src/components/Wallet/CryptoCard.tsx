@@ -1,5 +1,5 @@
 
-import { Bitcoin, Ethereum } from "lucide-react";
+import { Bitcoin } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -20,7 +20,12 @@ export default function CryptoCard({
 }: CryptoCardProps) {
   const iconMap = {
     bitcoin: <Bitcoin className="h-6 w-6 text-crypto-orange" />,
-    ethereum: <Ethereum className="h-6 w-6 text-crypto-blue" />,
+    ethereum: (
+      <svg className="h-6 w-6 text-crypto-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 1.75L5.75 12.25L12 16L18.25 12.25L12 1.75Z" fill="currentColor" />
+        <path d="M12 16L5.75 12.25L12 22.25L18.25 12.25L12 16Z" fill="currentColor" opacity="0.6" />
+      </svg>
+    ),
     usdc: (
       <div className="h-6 w-6 flex items-center justify-center bg-crypto-green text-white rounded-full text-xs font-bold">
         US
